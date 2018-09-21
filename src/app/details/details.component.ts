@@ -10,7 +10,7 @@ import {DataService} from '../data.service';
 export class DetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private data: DataService) {
-    this.route.params.subscribe(params =>)
+    // this.route.params.subscribe(params =>)
   }
 
   ngOnInit() {
