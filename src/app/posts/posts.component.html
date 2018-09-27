@@ -1,3 +1,13 @@
-<p>
-  posts works!
-</p>
+<h1>Posts</h1>
+
+<ul>
+  <li *ngFor="let rest of rest$">
+  <p>{{ rest.restaurant }}</p>
+    <ul>
+      <li *ngFor="let restmeals of rest.meals">
+        {{ restmeals.weight }} {{ restmeals.name }} {{ restmeals.price }}
+
+      </li>
+    </ul>
+  </li>
+</ul>

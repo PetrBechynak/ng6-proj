@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {DataService} from '../data.service';
 
@@ -9,11 +9,16 @@ import {DataService} from '../data.service';
 })
 export class DetailsComponent implements OnInit {
 
+  user$: Object;
+
   constructor(private route: ActivatedRoute, private data: DataService) {
-    // this.route.params.subscribe(params =>)
+    this.route.params.subscribe(params => this.user$ = params.id);
   }
 
   ngOnInit() {
+    this.data.getUser(this.user$).subscribe(
+      userData => this.user$ = userData
+    );
   }
 
 }
