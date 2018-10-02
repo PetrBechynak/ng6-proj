@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostsComponent } from './posts/posts.component';
-import { UsersComponent } from './users/users.component';
-import { DetailsComponent } from './details/details.component';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -15,8 +13,6 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppComponent,
     SidebarComponent,
     PostsComponent,
-    UsersComponent,
-    DetailsComponent
   ],
   imports: [
     BrowserAnimationsModule,
