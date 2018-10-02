@@ -22,10 +22,13 @@ export class DataService {
     return this.http.get('https://jsonplaceholder.typicode.com/posts');
   }
 
-  getMenus() {
+  getMenusLocal() {
     console.log(this.http.get<Menu[]>('http://localhost:8080/menus'));
     return this.http.get<Menu[]>('http://localhost:8080/menus');
+  }
 
+  getMenus() {
+    return this.http.get<Menu[]>('https://evening-plateau-80649.herokuapp.com/menus');
   }
 
   getTest() {
